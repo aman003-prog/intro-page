@@ -68,18 +68,42 @@ main {
     border-radius: 20px;
     margin: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
     background-color: lightgray;
     display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    max-height: 80px;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif ;
+    transition: max-height 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
+}
+.details {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 .goal-card:hover {
+    max-height: 200px;
     transform: scale(1.05);
     background-color: rgb(148, 148, 148);
+    justify-content: flex-start;
+    transition: max-height 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
+}
+
+.goal-card:hover .details {
+    max-height: 150px;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h1, h2 {
