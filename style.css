@@ -1,9 +1,14 @@
 body {
-    background-color: #f4f4f4;
+    background-color: #0a0e17;
+    color: #e2e8f0;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.menu {
+    display: none;
 }
 
 a {
@@ -16,15 +21,27 @@ a {
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    background-color: #333333;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #111827;
     padding: 20px;
+    border-bottom: 2px solid #ccf381;
 }
 
 .navbar {
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+.navbar a {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ccf381;
+    text-shadow: 0px 0px 8px rgba(204, 243, 129, 0.8);
 }
 
 .link {
@@ -44,7 +61,7 @@ main {
 .profile img {
     height: 200px;
     width: 200px;
-    border: 3px solid #000000;
+    border: 3px solid #ccf381;
     border-radius: 50%;
     transition: 0.3s;
 }
@@ -52,6 +69,7 @@ main {
 .profile img:hover{
     cursor: pointer;
     transform: scale(1.03);
+    box-shadow: 0px 0px 20px rgba(204, 243, 129, 0.6)
 }
 
 .goals-container {
@@ -62,34 +80,35 @@ main {
 }
 
 .goal-card {
-    border: 1px solid black;
+    border: 1px solid #ccf381;
     width: 250px;
     padding: 10px;
     border-radius: 20px;
     margin: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(204, 243, 129, 0.1);
     transition: 0.5s;
-    background-color: lightgray;
+    background-color: #1f2937;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     height: 50px;
+    color: White;
 }
 
 .goal-card:hover {
-    transform: scale(1.05);
-    background-color: rgb(148, 148, 148);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(204, 243, 129, 0.6);
+    max-height: 300px;
+    cursor: pointer;
 }
 
 h1, h2 {
     text-align: center;
-    font-family: "Poppins", sans-serif;
-    color: white;
-}
-
-h2 {
-    color: black;
+    font-family: "Orbitron", sans-serif;
+    color: #ccf381;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 p {
@@ -100,7 +119,45 @@ p {
 .footer {
     display: flex;
     justify-content: center;
-    background-color: #333333;
+    background-color: #111827;
     padding: 20px;
     gap: 30px;
+    border-top: 2px solid #ccf381;
+}
+
+.footer a {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ccf381;
+    text-shadow: 0px 0px 8px rgba(204, 243, 129, 0.8);
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        border-top: 1px solid #333;
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #ccf381;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
 }

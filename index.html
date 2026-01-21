@@ -13,6 +13,7 @@
         <div class="name">
             <h1>Aman Gupta</h1>
         </div>
+        <div class="menu">☰</div>
         <div class="navbar">
             <div class="link"><a href="#home">Home</a></div>
             <div class="link"><a href="#about">About</a></div>
@@ -41,5 +42,17 @@
         <div class="link-github"><a href="https://github.com/aman003-prog/" target="_blank" rel="noopener noreferrer">My GitHub Profile</a></div>
         <div class="link-linkedin"><a href="https://www.linkedin.com/in/amangupta-ln/" target="_blank" rel="noopener noreferrer">My Linkedin Profile</a></div>
     </footer>
+    <script>
+        // I have used AI to write this i don't know JS
+        // 1. Select the elements
+        const menuButton = document.querySelector('.menu');
+        const navbar = document.querySelector('.navbar');
+
+        // 2. Add the Event Listener
+        menuButton.addEventListener('click', () => {
+            // 3. Toggle the class
+            navbar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
