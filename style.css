@@ -134,6 +134,61 @@ p {
     text-shadow: 0px 0px 8px rgba(204, 243, 129, 0.8);
 }
 
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+label {
+    font-family: "Open sans", sans-serif;
+}
+
+#Message, #Mail, #Name {
+    border: 1px solid #ccf381;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(204, 243, 129, 0.1);
+    transition: 0.5s;
+    background-color: #1f2937;
+    color: White;
+}
+
+#Message:hover, #Mail:hover, #Name:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(204, 243, 129, 0.6);
+    max-height: 300px;
+    cursor: pointer;
+}
+
+#send-message {
+    border: 1px solid #ccf381;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(204, 243, 129, 0.1);
+    transition: 0.5s;
+    background-color: #1f2937;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: White;
+}
+
+#send-message:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(204, 243, 129, 0.6);
+    max-height: 300px;
+    cursor: pointer;
+}
+
 @media (max-width: 576px) {
     .navbar {
         display: none;
